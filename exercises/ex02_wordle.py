@@ -4,4 +4,4 @@ __author__: str = "730481634"
 
 
 def contains_char(word: str, letter: str)
-    
+    return 10
