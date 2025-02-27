@@ -12,3 +12,12 @@ def contains_char(word: str, letter: str) -> bool:
             return True
         index = index + 1
     return False
+
+
+def emojified(guess: str, secret: str) -> str:
+    """Returning string of boxes based on correctness of guess"""
+    WHITE_BOX: str = "\U00002B1C"
+    GREEN_BOX: str = "\U0001F7E9"
+    YELLOW_BOX: str = "\U0001F7E8"
+    assert len(guess) == len(secret), "Guess must be same length as secret"
+    correctness: list[str] = []
