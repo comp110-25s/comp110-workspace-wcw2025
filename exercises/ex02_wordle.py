@@ -22,7 +22,7 @@ def emojified(guess: str, secret: str) -> str:
     assert len(guess) == len(secret), "Guess must be same length as secret"
     correctness: list(str) = []
     n: int = 0
-    while n < len(guess)
+    while n < len(guess):
         correctness[n] = GREEN_BOX
     return correctness
     count: int = 0
