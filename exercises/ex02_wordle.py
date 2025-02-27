@@ -11,4 +11,4 @@ def contains_char(word: str, letter: str) -> bool:
         if letter == word[index]:
             return True
         index = index + 1
-    return True
+    return False
