@@ -11,5 +11,3 @@ def contains_char(word: str, letter: str) -> bool:
             return True
         index=index+1
     return False
-
-def emojified
