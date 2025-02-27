@@ -20,4 +20,11 @@ def emojified(guess: str, secret: str) -> str:
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
     assert len(guess) == len(secret), "Guess must be same length as secret"
-    correctness: list[str] = []
+    correctness: list(str) = []
+    n: int = 0
+    while n < len(guess)
+        correctness[n] = GREEN_BOX
+    return correctness
+    count: int = 0
+    while count < len(guess):
+        if contains_char(secret,guess[count]) == True:
