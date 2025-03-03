@@ -49,12 +49,12 @@ def input_guess(length: int) -> str:
 def main(secret: str) -> None:
     """The entrypoint of the program and main game loop."""
     k: int = 1
-    guess_prompt: str = ""
+    guessed_word: str = ""
     while k <= 6:
         print(f"=== Turn {k}/6 ===")
-        guess_prompt = str(input_guess(len(secret)))
-        print(f"{emojified(guess_prompt, secret)}")
-        if guess_prompt == secret:
+        guessed_word = str(input_guess(len(secret)))
+        print(f"{emojified(guessed_word, secret)}")
+        if guessed_word == secret:
             print(f"You won in {k}/6 Turns!")
             return
         k = k + 1
