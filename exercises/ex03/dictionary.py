@@ -12,8 +12,34 @@ def invert(dictionary: dict[str,str]) -> dict[str,str]:
             inversion[dictionary[key]]=key
     return inversion
 
-def count(given_list: list[str]) -> int:
+def count(given_list: list[str]) -> dict[str,int]:
+    """DOCSTRING"""
     index: int = 0
-    while index<len(given_list):
-        return 5
-    return 5
+    final_dict: dict[str,int] = {}
+    while index < len(given_list):
+        if given_list[index] in final_dict:
+            final_dict[given_list[index]] += 1
+            index += 1
+        else:
+            final_dict[given_list[index]] = 1
+            index += 1
+    return final_dict
+
+def favorite_color(colors: dict[str,str]) -> str:
+    """DOCSTRING"""
+    """Do we need to account for when names are repeated? It doesn't record the same way if they are"""
+    color_list: list[str] = []
+    for key in colors:
+        color_list.append(colors[key])
+    counted_colors: dict[str,int] = count(color_list)
+    count_list: list[int] = []
+    for key in counted_colors:
+        count_list.append(counted_colors[key])
+    for key in counted_colors:
+        if counted_colors[key] == max(count_list):
+            return key
+    return 'This list is empty!'
+    """Consider edge cases here"""
+
+def bin_len(strings: list[str]) -> dict[int,list[str]]:
+    
