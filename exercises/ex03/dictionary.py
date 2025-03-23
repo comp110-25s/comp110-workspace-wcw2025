@@ -4,7 +4,7 @@ __author__: str = "730481634"
 
 def invert(dictionary: dict[str,str]) -> dict[str,str]:
     """Function inverting a given dictionary's keys and values"""
-    inversion: dict[str,str] ={}
+    inversion: dict[str,str] = {}
     for key in dictionary:
         if dictionary[key] in inversion:
             raise KeyError("You can't have a value more than once!")
@@ -39,7 +39,22 @@ def favorite_color(colors: dict[str,str]) -> str:
         if counted_colors[key] == max(count_list):
             return key
     return 'This list is empty!'
-    """Consider edge cases here"""
+    """Consider edge cases here, maybe return empty string"""
 
-def bin_len(strings: list[str]) -> dict[int,list[str]]:
-    
+def bin_len(strings: list[str]) -> dict[int,set[str]]:
+    """DOCSTRING"""
+    idx: int = 0
+    bin_sizes: list[int] = []
+    while idx < len(strings):
+        bin_sizes.append(len(strings[idx]))
+        idx += 1
+    idx = 0
+    bins: dict[int,set[str]] = {}
+    while idx < len(bin_sizes):
+        if bin_sizes[idx] in bins:
+            bins[bin_sizes[idx]].add(strings[idx])
+            idx += 1
+        else:
+            bins[bin_sizes[idx]] = {strings[idx]}
+            idx += 1
+    return bins
