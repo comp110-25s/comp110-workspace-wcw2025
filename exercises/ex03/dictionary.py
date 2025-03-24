@@ -27,7 +27,6 @@ def count(given_list: list[str]) -> dict[str,int]:
 
 def favorite_color(colors: dict[str,str]) -> str:
     """DOCSTRING"""
-    """Do we need to account for when names are repeated? It doesn't record the same way if they are"""
     color_list: list[str] = []
     for key in colors:
         color_list.append(colors[key])
@@ -38,8 +37,7 @@ def favorite_color(colors: dict[str,str]) -> str:
     for key in counted_colors:
         if counted_colors[key] == max(count_list):
             return key
-    return 'This list is empty!'
-    """Consider edge cases here, maybe return empty string"""
+    return ''
 
 def bin_len(strings: list[str]) -> dict[int,set[str]]:
     """DOCSTRING"""
