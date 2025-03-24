@@ -1,4 +1,4 @@
-"""DOCSTRING"""
+"""Practice creating functions using dictionaries"""
 
 __author__: str = "730481634"
 
@@ -13,7 +13,7 @@ def invert(dictionary: dict[str,str]) -> dict[str,str]:
     return inversion
 
 def count(given_list: list[str]) -> dict[str,int]:
-    """DOCSTRING"""
+    """Function counting the number of times a value appears in a list"""
     index: int = 0
     final_dict: dict[str,int] = {}
     while index < len(given_list):
@@ -26,7 +26,7 @@ def count(given_list: list[str]) -> dict[str,int]:
     return final_dict
 
 def favorite_color(colors: dict[str,str]) -> str:
-    """DOCSTRING"""
+    """Function determining the most popular answer from a poll of people's favorite colors"""
     color_list: list[str] = []
     for key in colors:
         color_list.append(colors[key])
@@ -40,7 +40,7 @@ def favorite_color(colors: dict[str,str]) -> str:
     return ''
 
 def bin_len(strings: list[str]) -> dict[int,set[str]]:
-    """DOCSTRING"""
+    """Function sorting a words into bins by length"""
     idx: int = 0
     bin_sizes: list[int] = []
     while idx < len(strings):
