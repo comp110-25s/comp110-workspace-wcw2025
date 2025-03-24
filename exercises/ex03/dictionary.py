@@ -9,7 +9,7 @@ def invert(dictionary: dict[str,str]) -> dict[str,str]:
         if dictionary[key] in inversion:
             raise KeyError("You can't have a value more than once!")
         else:
-            inversion[dictionary[key]]=key
+            inversion[dictionary[key]] = key
     return inversion
 
 def count(given_list: list[str]) -> dict[str,int]:
