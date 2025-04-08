@@ -30,23 +30,54 @@ class River:
             idx += 1
         self.fish = surviving_fish
         self.bears = surviving_bears
-
+        return None
+    
+    def remove_fish(self,amount: int):
+        i: int = 0
+        while i < amount:
+            self.fish.pop(i)
+            i += 1
         return None
 
     def bears_eating(self):
+        n: int = 0
+        while n < len(self.bears):
+            if len(self.fish) <= 5:
+                self.bears[n].eat(3)
+                self.remove_fish(3)
+            n += 1
         return None
     
     def check_hunger(self):
+        k: int = 0
+        not_starving: list[Bear] = []
+        while k < len(self.bears):
+            if self.bears[k].hunger_score >= 0:
+                not_starving.append(self.bears[k])
+            k += 1
+        self.bears = not_starving
         return None
         
     def repopulate_fish(self):
+        added_fish: int = (len(self.fish)//2)*4
+        l: int = 0
+        new_fish: Fish = Fish()
+        while l < added_fish:
+            self.fish.append(new_fish)
+            l += 1
         return None
     
     def repopulate_bears(self):
+        added_bears: int = len(self.bears)//2
+        m: int = 0
+        new_bear: Bear = Bear()
+        while m < added_bears:
+            self.bears.append(new_bear)
+            m += 1
         return None
     
     def view_river(self):
-        print(f"~~~ Day {999999999999}: ~~~")
+        print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
         return None
