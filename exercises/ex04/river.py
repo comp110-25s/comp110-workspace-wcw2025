@@ -50,7 +50,7 @@ class River:
         """Simulating bears eating fish."""
         n: int = 0
         while n < len(self.bears):
-            if len(self.fish) <= 5:
+            if len(self.fish) >= 5:
                 self.bears[n].eat(3)
                 self.remove_fish(3)
             n += 1
