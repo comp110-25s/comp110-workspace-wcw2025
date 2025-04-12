@@ -31,6 +31,9 @@ class River:
         while idx < len(self.fish):
             if self.fish[idx].age <= 3:
                 surviving_fish.append(self.fish[idx])
+            idx += 1
+        idx = 0
+        while idx < len(self.bears):
             if self.bears[idx].age <= 5:
                 surviving_bears.append(self.bears[idx])
             idx += 1
@@ -121,5 +124,5 @@ class River:
         """Simulating one week for the river."""
         seven_calls: int = 0
         while seven_calls < 7:
-            self.one_river_day
+            self.one_river_day()
             seven_calls += 1
