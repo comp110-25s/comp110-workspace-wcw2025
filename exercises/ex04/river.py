@@ -7,6 +7,7 @@ from exercises.EX04.bear import Bear
 
 
 class River:
+    """Class of the river in our ecosystem."""
     day: int
     bears: list[Bear]
     fish: list[Fish]
@@ -37,7 +38,7 @@ class River:
         self.bears = surviving_bears
         return None
     
-    def remove_fish(self,amount: int):
+    def remove_fish(self, amount: int):
         """Getting rid of dead fish."""
         i: int = 0
         while i < amount:
@@ -68,7 +69,7 @@ class River:
         
     def repopulate_fish(self):
         """Building back the fish population."""
-        added_fish: int = (len(self.fish)//2)*4
+        added_fish: int = (len(self.fish) // 2) * 4
         l: int = 0
         new_fish: Fish = Fish()
         while l < added_fish:
