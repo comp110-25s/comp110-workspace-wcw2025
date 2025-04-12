@@ -1,7 +1,9 @@
 """File to define River class."""
 
-from exercises.ex04.fish import Fish
-from exercises.ex04.bear import Bear
+__author__: str = "730481634"
+
+from exercises.EX04.fish import Fish
+from exercises.EX04.bear import Bear
 
 class River:
     day: int
@@ -19,6 +21,7 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
+        """Killing off fish and bears that are too old"""
         idx: int = 0
         surviving_fish: list[Fish] = []
         surviving_bears: list[Bear] = []
@@ -33,6 +36,7 @@ class River:
         return None
     
     def remove_fish(self,amount: int):
+        """Getting rid of dead fish"""
         i: int = 0
         while i < amount:
             self.fish.pop(i)
@@ -40,6 +44,7 @@ class River:
         return None
 
     def bears_eating(self):
+        """Simulating bears eating fish"""
         n: int = 0
         while n < len(self.bears):
             if len(self.fish) <= 5:
@@ -49,6 +54,7 @@ class River:
         return None
     
     def check_hunger(self):
+        """Killing off starved bears"""
         k: int = 0
         not_starving: list[Bear] = []
         while k < len(self.bears):
@@ -59,6 +65,7 @@ class River:
         return None
         
     def repopulate_fish(self):
+        """Building back the fish population"""
         added_fish: int = (len(self.fish)//2)*4
         l: int = 0
         new_fish: Fish = Fish()
@@ -68,6 +75,7 @@ class River:
         return None
     
     def repopulate_bears(self):
+        """Building back the bear population"""
         added_bears: int = len(self.bears)//2
         m: int = 0
         new_bear: Bear = Bear()
@@ -77,6 +85,7 @@ class River:
         return None
     
     def view_river(self):
+        """Viewing the river ecosystem's status"""
         print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
@@ -106,6 +115,7 @@ class River:
         self.view_river()
     
     def one_river_week(self):
+        """Simulating one week for the river"""
         seven_calls: int = 1
         while seven_calls <= 7:
             self.one_river_day
