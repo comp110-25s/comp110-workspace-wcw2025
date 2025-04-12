@@ -119,10 +119,7 @@ class River:
     
     def one_river_week(self):
         """Simulating one week for the river."""
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
+        seven_calls: int = 0
+        while seven_calls < 7:
+            self.one_river_day
+            seven_calls += 1
