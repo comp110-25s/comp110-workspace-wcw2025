@@ -12,7 +12,7 @@ class River:
     bears: list[Bear]
     fish: list[Fish]
 
-    def __init__(self, num_fish: int, num_bears:int):
+    def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears Bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
@@ -79,7 +79,7 @@ class River:
     
     def repopulate_bears(self):
         """Building back the bear population."""
-        added_bears: int = len(self.bears)//2
+        added_bears: int = len(self.bears) // 2
         m: int = 0
         new_bear: Bear = Bear()
         while m < added_bears:
